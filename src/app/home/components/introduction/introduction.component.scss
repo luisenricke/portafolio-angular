@@ -1,0 +1,70 @@
+@import "abstracts/variables";
+
+$text-responsive: clamp(2rem, 6vw, 10rem);
+
+section {
+  background-color: $background-base-color;
+  padding: 0 2rem;
+}
+
+.say-hi {
+  color: $primary-color;
+  line-height: 1.2;
+
+  & em {
+    font-size: clamp(1.25rem, 0.5vw + 1rem, 3rem);
+    font-style: normal;
+  }
+
+  & .wave {
+    animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.5s; /* Change to speed up or slow down */
+    animation-iteration-count: infinite; /* Never stop waving :) */
+    transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+    display: inline-block;
+  }
+
+  & span.name {
+    padding-top: 8px;
+    display: block;
+    font-size: $text-responsive;
+    color: $contrast-color;
+  }
+}
+
+.professional-description {
+  color: $dark-grey;
+  font-size: $text-responsive;
+  line-height: 1.1;
+}
+
+.description {
+  margin-top: 1.2rem;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
+}
