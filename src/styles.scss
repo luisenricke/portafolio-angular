@@ -21,3 +21,7 @@
 
 // 7. Themes
 @import "themes/default";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
