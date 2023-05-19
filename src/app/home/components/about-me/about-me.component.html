@@ -1,0 +1,23 @@
+<section class="grid grid-cols-3 grid-flow-row gap-4">
+  <div class="col-span-3">
+    <h2>Sobre mí <span class="blinking"></span></h2>
+  </div>
+  <div class="col-span-3 md:col-span-2">
+    <p *ngFor="let item of descriptionParagraph">
+      {{ item }}
+    </p>
+    <ul class="grid grid-cols-3 gap-1 mx-2 md:mx-5 lg:mx-20 overflow-hidden">
+      <li *ngFor="let item of skills" class="rainbow">{{ item }}</li>
+    </ul>
+  </div>
+  <div
+    class="col-span-3 md:col-span-1 self-center py-0 md:py-10 place-self-center"
+  >
+    <img
+      ngSrc="./assets/images/me.png"
+      width="400"
+      height="200"
+      sizes="(max-width: 768px) 100vw, 50vw"
+    />
+  </div>
+</section>

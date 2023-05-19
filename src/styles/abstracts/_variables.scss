@@ -14,8 +14,8 @@ $code-font-stack: "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
 
 /// Copy text color
 /// @type Color
-$text-color: hsl(225, 10%, 75%) !default;
-
+$text-color: hsl(227, 27%, 87%) !default;
+/* $text-color: hsl(220 45% 80%) !default; */
 /// Copy text color
 /// @type Color
 $background-base-color: hsl(216, 65%, 11%) !default;
@@ -26,11 +26,15 @@ $primary-color: hsl(167, 64%, 59%) !default;
 
 /// Secondary color
 /// @type Color
-$secondary-color: hsl(54, 94%, 88%) !default;
+$secondary-color: hsl(65, 20%, 80%) !default;
+
+/// Third color
+/// @type Color
+$third-color: hsl(270, 20%, 80%) !default;
 
 /// Light grey
 /// @type Color
-$light-grey: hsl(0, 0%, 80%) !default;
+$light-grey: hsl(0, 0%, 86%) !default;
 
 /// Medium grey
 /// @type Color
@@ -62,3 +66,7 @@ $breakpoints: (
 /// @example scss - When using a CDN
 ///   $base-url: 'https://cdn.example.com/assets/';
 $base-url: "/assets/" !default;
+
+$text-title-responsive: clamp(2rem, 4vw + 1rem, 3rem);
+$text-title-decoration-responsive: clamp(1rem, 2vw + 1rem, 2rem);
+$text-item-list: 0.85em;

@@ -1,0 +1,59 @@
+@import "abstracts/variables";
+
+section {
+  background-color: $background-base-color;
+  padding: 0 2rem;
+}
+
+p {
+  margin: 10px 0 20px;
+}
+
+li {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  font-size: $text-item-list;
+
+  &::before {
+    content: "\00D7";
+    position: absolute;
+    top: 6px;
+    left: 0px;
+    line-height: 12px;
+  }
+
+  &:hover {
+    animation: rainbow 5s linear;
+    animation-iteration-count: infinite;
+  }
+}
+
+img {
+  max-height: 30rem;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+@keyframes rainbow {
+  100%,
+  0% {
+    color: hsl(0, 100%, 75%);
+  }
+  20% {
+    color: hsl(60, 100%, 77%);
+  }
+  40% {
+    color: hsl(120, 100%, 79%);
+  }
+  60% {
+    color: hsl(180, 100%, 76%);
+  }
+  80% {
+    color: hsl(270, 100%, 75%);
+  }
+  100% {
+    color: hsl(330, 100%, 77%);
+  }
+}
