@@ -8,7 +8,7 @@ section {
 }
 
 .say-hi {
-  color: $primary-color;
+  color: $light-grey;
   line-height: 1.2;
 
   & em {
@@ -28,12 +28,12 @@ section {
     padding-top: 8px;
     display: block;
     font-size: $text-responsive;
-    color: $contrast-color;
+    color: $primary-color;
   }
 }
 
 .professional-description {
-  color: $dark-grey;
+  color: $secondary-color;
   font-size: $text-responsive;
   line-height: 1.1;
 }
