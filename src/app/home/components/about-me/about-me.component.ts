@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { NgOptimizedImage } from '@angular/common'
 
 @Component({
   selector: 'app-about-me',
@@ -29,5 +28,5 @@ export class AboutMeComponent {
     'Spring',
   ];
 
-  imgPath: string = './me.png'
+  imgPath: string = './me.png';
 }

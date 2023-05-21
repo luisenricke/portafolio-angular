@@ -10,14 +10,22 @@
       <li *ngFor="let item of skills" class="rainbow">{{ item }}</li>
     </ul>
   </div>
+
+  <!-- TODO optimize configuration of classes and selectors in SCSS -->
   <div
-    class="col-span-3 md:col-span-1 self-center py-0 md:py-10 place-self-center"
+    class="col-span-3 md:col-span-1 self-center py-0 md:py-10 place-self-center wrap"
   >
-    <img
-      ngSrc="./assets/images/me.png"
-      width="400"
-      height="200"
-      sizes="(max-width: 768px) 100vw, 50vw"
-    />
+    <div class="wrapper">
+      <picture>
+        <img
+          ngSrc="./assets/images/me.png"
+          width="400"
+          height="200"
+          sizes="(max-width: 768px) 100vw, 50vw"
+          class="round"
+          style="object-fit: cover; opacity: 1"
+        />
+      </picture>
+    </div>
   </div>
 </section>
