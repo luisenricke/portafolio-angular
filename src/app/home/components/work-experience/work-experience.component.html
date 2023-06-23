@@ -1,0 +1,69 @@
+<section class="flex flex-col justify-center h-full">
+  <h2>Experiencia <span class="blinking"></span></h2>
+  <div
+    class="items-center w-full px-4 py-4 rounded-md mx-auto my-10 sm:w-11/12 overflow-auto"
+  >
+    <div class="flex flex-col md:flex-row">
+      <ul
+        class="flex flex-row md:flex-col w-full md:w-1/4 mx-auto py-4 md:py-0 sm:mx-0 overflow-x-auto"
+      >
+        <li
+          class="md:inline-flex group rounded w-full"
+          *ngFor="let item of workExperiences; index as i"
+        >
+          <div
+            class="md:visible invisible flex w-1 transition-transform origin-top rounded-full duration-400 ease-in"
+            [ngClass]="{
+              'primary__bc bg-opacity-100 scale-100': focused === i
+            }"
+          ></div>
+          <a
+            class="flex p-2 text-sm md:text-base font-semibold text-gray-500 dark:text-gray-300 group-hover:text-green-600 dark:group-hover:text-white"
+            (click)="focused = i"
+          >
+            {{ item?.name }}
+          </a>
+          <div
+            class="md:invisible flex h-1 transition-transform origin-top rounded-full duration-500 ease-out"
+            [ngClass]="{
+              'primary__bc bg-opacity-100 scale-100': focused === i
+            }"
+          ></div>
+        </li>
+      </ul>
+      <div class="flex w-full md:w-3/4">
+        <div class="w-full">
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2 title-job">
+              {{ workExperienceFocus?.content?.job }}
+              <span class="primary__c">
+                @
+                {{ workExperienceFocus?.name }}
+              </span>
+            </div>
+            <div class="font-medium text-lg mb-2 subtitle-job">
+              {{ workExperienceFocus?.content?.startAt }} -
+              {{ workExperienceFocus?.content?.endAt }}
+            </div>
+            <ul class="point-style list-disc">
+              <li
+                *ngFor="let task of workExperienceFocus?.content?.tasks"
+                class="text-base mb-2"
+              >
+                {{ task }}
+              </li>
+            </ul>
+          </div>
+          <div class="px-6 pt-4 pb-2">
+            <span
+              class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+              *ngFor="let stack of workExperienceFocus?.content?.stack"
+            >
+              {{ stack }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

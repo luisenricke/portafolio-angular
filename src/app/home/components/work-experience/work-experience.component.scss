@@ -1,0 +1,43 @@
+@import "abstracts/variables";
+
+section {
+  background-color: $background-base-color;
+  padding: 0 2rem;
+}
+
+ul.point-style {
+  list-style-type: none;
+  & > li {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    font-size: $text-item-list;
+
+    &::before {
+      content: "▹ ";
+      color: $primary-color;
+      position: absolute;
+      top: 6px;
+      left: 0px;
+      line-height: 12px;
+    }
+  }
+}
+
+.primary {
+  &__bc {
+    background-color: $primary-color !important;
+  }
+
+  &__c {
+    color: $primary-color !important;
+  }
+}
+
+.title-job {
+  line-height: 1.25rem;
+}
+
+.subtitle-job {
+  line-height: 1.5rem;
+}
