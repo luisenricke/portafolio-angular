@@ -6,6 +6,7 @@ import { SharedModule } from '../shared/shared.module';
 import { HomeRoutingModule } from './';
 import {
   AboutMeComponent,
+  GetInTouchComponent,
   IntroductionComponent,
   WorkExperienceComponent,
 } from './components';
@@ -16,6 +17,7 @@ import { HomeComponent } from './pages';
     HomeComponent,
 
     AboutMeComponent,
+    GetInTouchComponent,
     IntroductionComponent,
     WorkExperienceComponent,
   ],

@@ -1,0 +1,33 @@
+@import "abstracts/variables";
+
+section {
+  background-color: $background-base-color;
+  padding: 0 2rem;
+}
+
+.primary {
+  &__bc {
+    background-color: $primary-color !important;
+  }
+
+  &__c {
+    color: $primary-color !important;
+  }
+
+  &__brc {
+    border-color: $primary-color !important;
+  }
+}
+
+button {
+  background-color: transparent;
+  color: $primary-color !important;
+  border-width: 1px;
+  border-color: $primary-color !important;
+  font-weight: 600;
+  border-radius: 0.25rem;
+
+  &:hover {
+    background-color: hsla(167, 64%, 59%, 0.25);
+  }
+}
