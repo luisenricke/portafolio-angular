@@ -6,8 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./work-experience.component.scss'],
 })
 export class WorkExperienceComponent implements OnInit {
-  focused: number = 0;
-
   get workExperienceFocus(): any {
     return this.workExperiences.at(this.focused);
   }
@@ -45,7 +43,29 @@ export class WorkExperienceComponent implements OnInit {
         ],
       },
     },
+    {
+      slug: 'salle-oaxaca',
+      name: 'La Salle Oaxaca',
+      content: {
+        job: 'Desarrollador FullStack(Angular & Grails)',
+        startAt: 'Noviembre 2020',
+        endAt: null,
+        tasks: [
+          'Participación en la planificación de sprints para para revisar requisitos y casos de uso respecto a la metodología SCRUM.',
+          'Maquetación y desarrollo de distintas interfaces con la filosofía de mobile first.',
+          'Uso de Reactive Forms para la manipulación y validación en los formularios.',
+          'Desarrollo de distintos componentes reutilizables en Angular con el uso de Directivas, Pipes y Utilerías.',
+          'Desarrollo y uso de Servicios Web con Angular, además, de uso de la librería de RxJS para realizar las peticiones respecto al requerimiento necesario.',
+          'Desarrollo y testeo de API REST para diferentes módulos respecto a los requerimientos.',
+          'Implementando funcionalidades para que la experiencia del desarrollo sea más ligera como el uso de linters, analizadores de código (CodeNarc), loggers, JWT.',
+          'Apoyo al equipo para solventar dudas o ideas para optimizar las peticiones al servidor o mejorar la experiencia de usuario',
+        ],
+      },
+    },
   ];
+  focused: number = this.workExperiences.length
+    ? this.workExperiences.length - 1
+    : 0;
 
   ngOnInit(): void {}
 }
