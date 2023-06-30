@@ -4,13 +4,13 @@
 @font-face {
   font-family: "BigBlueTermPlusNerdFont";
   src: local("BigBlueTermPlusNerdFont"),
-    url(/assets/fonts/BigBlueTerminal/BigBlueTermPlusNerdFont-Regular.ttf)
+    url("../../assets/fonts/BigBlueTerminal/BigBlueTermPlusNerdFont-Regular.ttf")
       format("truetype");
 }
 
 @font-face {
   font-family: "Montserrat";
   src: local("Montserrat"),
-    url(/assets/fonts/Montserrat/static/Montserrat-Regular.ttf)
+    url("../../assets/fonts/Montserrat/static/Montserrat-Regular.ttf")
       format("truetype");
 }
