@@ -8,6 +8,7 @@ import {
   AboutMeComponent,
   GetInTouchComponent,
   IntroductionComponent,
+  NavigationComponent,
   WorkExperienceComponent,
 } from './components';
 import { HomeComponent } from './pages';
@@ -19,6 +20,7 @@ import { HomeComponent } from './pages';
     AboutMeComponent,
     GetInTouchComponent,
     IntroductionComponent,
+    NavigationComponent,
     WorkExperienceComponent,
   ],
   imports: [NgOptimizedImage, CommonModule, HomeRoutingModule, SharedModule],

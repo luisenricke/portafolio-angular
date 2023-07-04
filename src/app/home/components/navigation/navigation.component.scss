@@ -1,0 +1,33 @@
+@import "abstracts/variables";
+
+nav {
+  z-index: 999;
+  background-color: hsla(217, 64%, 11%, 0.95);
+}
+
+.translate-y-0 {
+  transform: translateY(0);
+}
+
+.-translate-y-full {
+  transform: translateY(-100%);
+}
+
+.nav-responsive > li {
+  margin-top: 0.5rem;
+
+  & > a {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+li > a,
+button {
+  color: $text-color;
+
+  &:hover {
+    color: $primary-color;
+  }
+}

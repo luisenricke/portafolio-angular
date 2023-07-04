@@ -1,0 +1,70 @@
+<nav
+  class="navbar fixed top-0 w-full transition-transform duration-300 transform"
+  [ngClass]="{
+    '-translate-y-full': isScrollingDown,
+    'translate-y-0': !isScrollingDown
+  }"
+>
+  <div class="container flex items-center justify-between px-4 py-3 mx-auto">
+    <div class="flex items-center">
+      <!-- <img src="ruta-a-tu-logo.png" alt="Logo" class="h-8" /> -->
+      Luis Villalobos
+    </div>
+    <div class="hidden md:block">
+      <ul class="flex space-x-4">
+        <li>
+          <a (click)="handleClick($event, 'home')">Home</a>
+        </li>
+        <li>
+          <a (click)="handleClick($event, 'about')">About</a>
+        </li>
+        <li>
+          <a (click)="handleClick($event, 'experience')">Experience</a>
+        </li>
+        <li>
+          <a (click)="handleClick($event, 'contact')">Contact</a>
+        </li>
+      </ul>
+    </div>
+    <div class="md:hidden">
+      <button
+        type="button"
+        class="text-gray-700 hover:text-gray-900 focus:outline-none"
+        (click)="toggleNavigation()"
+      >
+        <!-- Icono del menú responsivo, por ejemplo, utilizando Font Awesome -->
+        <svg
+          class="w-6 h-6"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M 4 6 h 16 M 7 12 h 13 M 10 18 h 10"
+          ></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="md:hidden" [class.hidden]="!showNavigation">
+    <ul class="flex flex-col space-y-4 px-4 py-2" class="nav-responsive">
+      <li>
+        <a (click)="handleClick($event, 'home')">Home</a>
+      </li>
+      <li>
+        <a (click)="handleClick($event, 'about')">About</a>
+      </li>
+      <li>
+        <a (click)="handleClick($event, 'experience')">Experience</a>
+      </li>
+      <li>
+        <a (click)="handleClick($event, 'contact')">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
